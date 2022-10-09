@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(210, 46%, 95%);
+    font-size: 14px;
+}
+
+.white, .greyish-white{
+    color: black;
+}
+
+.container{
+    /* width: 20rem; */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: grid;
+    row-gap: 20px;
+    grid-auto-columns: 20rem;
+}
+
+.purple{
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 10px right 20px;
+}
+
+.greyish-blue{
+    background-color: hsl(217, 19%, 35%);
+}
+
+.white{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.dark-greyish-blue{
+    background-color: hsl(219, 29%, 14%);
+}
+
+.greyish-white{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cards{
+    border-radius: 7px;
+    padding: 30px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 13px;
+    width: 100px;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(263, 55%, 52%);
+    margin-right: 20px;
+}
+
+span{
+    opacity: 50%;
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+p{
+    opacity: 70%;
+}
+
+
+@media screen and (min-width:800px) {
+
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        max-width: 1440px;
+        margin: 100px auto;
+        padding: 0 5rem 0 5rem ;
+        justify-content: center;
+        align-items: stretch;
+        grid-template-areas: 
+            'v v w x'
+            'y z z x'
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 300px 300px; */
+        grid-column-gap: 20px;
+    }
+
+    .purple{
+        grid-area: v;
+        grid-auto-columns: 2fr;
+        background-position: top 10px right 100px;
+    }
+
+    .greyish-blue{
+        grid-area: w;
+    }
+
+    .greyish-white{
+        grid-area: x;
+    }
+
+    .white{
+        grid-area: y;
+    }
+
+    .dark-greyish-blue{
+        grid-area: z;
+    }
+}
